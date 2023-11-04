@@ -1,0 +1,34 @@
+{% extends 'base1.html' %}
+
+{% block content %}
+    <div class="reels">
+        <span class="title"><h1>{% block title %} The Reels Page {% endblock %}</h1></span>
+        <!-- {% for post in posts %}
+            <div class="post">
+                <p><b>#{{ post.id }}</b></p>
+                <p class="title">
+                    <b>
+                        <a href="#">
+                            {{ post.title }}
+                        </a>
+                    </b>
+                </p>
+                <div class="content">
+                    <p>{{ post.content }}</p>
+                </div>
+                <hr>
+            </div>
+        {% endfor %} -->
+
+        <script src="/static/main.js"></script>
+        
+    </div>
+    <div class="reels">
+        {% if prev_url %}
+        <a href="{{ prev_url }}"> | Newer posts |</a>
+        {% endif %}
+        {% if next_url %}
+        <a href="{{ next_url }}"> | Older posts |</a>
+        {% endif %}
+    </div>
+{% endblock %}

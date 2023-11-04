@@ -1,0 +1,15 @@
+{% extends 'base1.html' %}
+
+{% block content %}
+    <span class="title"><h1><b>{% block title %} Reels {% endblock %}</b></h1></span>
+    <div class="content">
+        <hr>
+        <h1>Welcome, {{ name }}!</h1>
+        <br>
+        <h3>Please visit the Reels page.</h3>
+        <br>
+        <img src="/static/images/tagged.png" alt="" width="250" height="300">
+        <!-- <h2>Visit the Posts page to see the Reels</h2> -->
+        <!-- <a href="{{ url_for('auth.logout') }}">Logout</a> -->
+    </div>
+{% endblock %}

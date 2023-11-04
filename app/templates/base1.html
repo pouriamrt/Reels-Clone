@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %} Reels</title>
+    <link rel="stylesheet" href="/static/sass/vender/bootstrap.css">
+    <link rel="stylesheet" href="/static/sass/vender/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/static/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.css">
+    <link rel="stylesheet" href="/static/sass/main.css">
+</head>
+<body>
+
+    <div class="post_page">
+        <!--***** nav menu start ****** -->
+        <div class="nav_menu">
+            <div class="fix_top">
+                <!-- nav for big->medium screen -->
+                <div class="nav">
+                    <div class="logo">
+                        <a href="{{ url_for('main.index') }}">
+                            <img class="d-block d-lg-none small-logo" src="/static/images/instagram.png" alt="logo">
+                            <img class="d-none d-lg-block" src="/static/images/logo_menu.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="{{ url_for('questions.index') }}">
+                                    <img src="/static/images/search.png">
+                                    <span class="d-none d-lg-block ">Questions</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('posts.index') }}">
+                                    <img src="/static/images/video.png">
+                                    <span class="d-none d-lg-block ">Reels</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('main.index') }}">
+                                    <img class="circle story" src="/static/images/profile_img.jpg">
+                                    <span class="d-none d-lg-block ">Profile</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="more">
+                        <div class="btn-group dropup">
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="/static/images/menu.png">
+                                <span class="d-none d-lg-block ">More</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">
+                                        <span>Settings</span>
+                                        <img src="/static/images/reglage.png">
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span>Switch apperance</span>
+                                        <img src="/static/images/moon.png">
+                                    </a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('questions.index') }}">
+                                        <span>Report a problem</span>
+                                        <img src="/static/images/problem.png">
+                                    </a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('auth.logout') }}">
+                                        <span>Log out</span>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- nav for small screen  -->
+                <div class="nav_sm">
+                    <div class="content">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img class="logo" src="/static/images/logo_menu.png">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- menu in the botton for smal screen  -->
+            <div class="nav_bottom">
+                <a href="{{ url_for('main.index') }}"><img src="/static/images/accueil.png"></a>
+                <a href="{{ url_for('posts.index') }}"><img src="/static/images/video.png"></a>
+                <a href="{{ url_for('main.index') }}"><img class="circle story" src="/static/images/profile_img.jpg"></a>
+            </div>
+        </div>
+        <!--***** nav menu end ****** -->
+        <div>
+            {% block content %} {% endblock %}
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+</body>
+
+</html>
